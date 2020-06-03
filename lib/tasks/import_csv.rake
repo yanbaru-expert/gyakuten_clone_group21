@@ -15,4 +15,12 @@ namespace :import_csv do
 	task movies: :environment do
 		Import.csv_data(path: "db/csv_data/movie_data.csv", table: Movie)
 	end
+
+	desc "質問集データをインポートするタスク"
+
+	# 質問集のCSV => タスク名：questions
+	task questions: :environment do
+		Import.csv_data(path: "db/csv_data/question_data.csv", table: Question)
+	end
+
 end

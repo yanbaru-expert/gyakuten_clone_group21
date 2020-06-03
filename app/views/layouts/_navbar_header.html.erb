@@ -1,8 +1,7 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand ml-5 h5" href="#">Gyakuten</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=3#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="navbar-collapse collapse show" id="navbarNav" style="">
@@ -12,47 +11,46 @@
           Rails
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="nav-item nav-link active text-primary" href="/">動画教材</a>
+          <a class="nav-item nav-link active text-primary" href="/movies">動画教材</a>
           <a class="nav-item nav-link active text-primary" href="#">テキスト教材</a>
           <a class="nav-item nav-link active text-primary" href="#">ライブコーディング</a>
           <a class="nav-item nav-link active text-primary" href="#">質問集</a>
         </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link active ml-4 h6" href="#">AWS講座</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link active ml-4 h6" href="#">PHP講座</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link active ml-4 h6" href="#">対談</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link active ml-4 h6" href="#">情報発信</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link active ml-4 h6" href="#">動画編集講座</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link active ml-4 h6" href="#">ライティング講座</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link active ml-4 h6" href="#">LINE@</a>
-        </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link active ml-4 h6" href="#">AWS講座</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link active ml-4 h6" href="#">PHP講座</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link active ml-4 h6" href="#">対談</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link active ml-4 h6" href="#">情報発信</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link active ml-4 h6" href="#">動画編集講座</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link active ml-4 h6" href="#">ライティング講座</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link active ml-4 h6" href="#">LINE@</a>
+      </li>
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <a class="nav-item nav-link active ml-4 h6" rel="nofollow" data-method="delete" href="/users/sign_out">ログアウト</a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link active ml-4 h6" rel="nofollow" data-method="delete" href="/users/sign_out">ログアウト</a>
+      </li>
 
       <% else %>
-        <li class="nav-item">
-          <a class="nav-item nav-link active ml-4 h6" href="/users/sign_up">新規登録</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item nav-link active ml-4 h6" href="/users/sign_in">ログイン</a>
-        </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link active ml-4 h6" href="/users/sign_up">新規登録</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link active ml-4 h6" href="/users/sign_in">ログイン</a>
+      </li>
       <% end %>
     </ul>
   </div>
 </nav>
-  

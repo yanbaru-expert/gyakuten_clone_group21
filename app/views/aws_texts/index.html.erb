@@ -1,0 +1,50 @@
+<div id="container">
+  <div class="text-center mt-5 mb-4">
+    <h2>AWS講座</h2>
+  </div>
+    <p>注意！！！：AWSのEC2やRDSは有料サービスとなります。無駄な料金を請求されないためにも、不要なインスタンスは停止・削除をしてください。</p>
+
+    <table class="table table-striped">
+      <thead class="aws-table-head text-white bg-primary">
+      <tr>
+        <th class="w-1">No.</th>
+        <th class="w-5">内容</th>
+      </tr>
+      </thead>
+        <tbody>
+          <% @aws_texts.each.with_index(1) do |aws_text, i|%>
+          <tr>
+            <td>
+              <%= i %>
+            </td>
+            <td>
+              <% case i %>
+              <% when 1 then %>
+              <a target="_blank" href="/aws/1"><%= aws_text.title %></a>
+              <% when 2 then %>
+              <a target="_blank" href="/aws/2"><%= aws_text.title %></a>
+              <% when 3 then %>
+              <a target="_blank" href="/aws/3"><%= aws_text.title %></a>
+              <% when 4 then %>
+              <a target="_blank" href="/aws/4"><%= aws_text.title %></a>
+              <% when 5 then %>
+              <a target="_blank" href="/aws/5"><%= aws_text.title %></a>
+              <% when 6 then %>
+              <a target="_blank" href="/aws/6"><%= aws_text.title %></a>
+              <% when 7 then %>
+              <a target="_blank" href="/aws/7"><%= aws_text.title %></a>
+              <% when 8 then %>
+              <a target="_blank" href="/aws/8"><%= aws_text.title %></a>
+              <% when 9 then %>
+              <a target="_blank" href="/aws/9"><%= aws_text.title %></a>
+              <% when 10 then %>
+              <a target="_blank" href="/aws/10"><%= aws_text.title %></a>
+              <% when 11 then %>
+              <a target="_blank" href="/aws/11"><%= aws_text.title %></a>
+              <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+    </table>
+</div>

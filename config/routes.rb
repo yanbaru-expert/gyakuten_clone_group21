@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
 	root 'movies#index'
-	get '/aws', to: 'aws_texts#index'
+	resources :aws_texts, only: [:index, :show]
 end

@@ -1,11 +1,13 @@
+<%= stylesheet_link_tag "questions", :media => "all" %>
+
 <% @questions.each do |question| %>
-  <div class="question-form mb-5">
-    <div class="card border-secondary mb-3" style="max-width: 50rem; height: 7rem">
-      <a href="#">
-        <div class="h5 text-muted m-3" >
-              <%= question.title %>
-        </div>
-      </a>
-    </div>   
-  </div>
+  	<div class="question-form">
+    	<div class="card border-dark mb-3"> 
+	   		<a href="#">
+	        	<div class="title h5 text-dark m-3" >
+	              <%= question.title %>
+    			</div>
+  			</a>
+    	</div>   
+ 	</div>
 <% end %>

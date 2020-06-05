@@ -15,7 +15,7 @@ gem 'pry-byebug'
 gem 'pry-doc'
 gem 'pry-rails'
 gem 'devise'
-gem 'devise-bootstrap-views', '~> 1.0'
+gem 'activeadmin'
 
 # 日本語化
 gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher

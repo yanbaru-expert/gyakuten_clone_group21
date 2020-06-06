@@ -23,9 +23,8 @@ gem 'devise-i18n'
 
 #Markdown適用
 gem 'redcarpet', '~> 2.3.0'
-
-#シンタックスハイライト
 gem 'coderay'
+#シンタックスハイライト
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

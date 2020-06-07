@@ -1,8 +1,13 @@
-<% @movies.each.with_index(1) do |movie, i| %>
+<% @movies.each.with_index(@movies.offset_value+1) do |movie, i| %>
 <div class="mt-5">
   <div class="text-center">
-    <h5><%="Lv.#{i}:#{movie.title}"%></h5>
+    <h5>Lv.<%=i%> : <%=movie.title%></h5>
     <iframe width="560" height="315" src="<%= movie.url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
 <%end%>
+<div class="mt-5">
+  <div class="pagination justify-content-center">
+    <%= paginate @movies %>
+  </div>
+</div>

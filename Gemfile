@@ -16,10 +16,16 @@ gem 'pry-doc'
 gem 'pry-rails'
 gem 'devise'
 gem 'activeadmin'
+gem 'kaminari'
 
 # 日本語化
 gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
 gem 'devise-i18n'
+
+#Markdown適用
+gem 'redcarpet', '~> 2.3.0'
+gem 'coderay'
+#シンタックスハイライト
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

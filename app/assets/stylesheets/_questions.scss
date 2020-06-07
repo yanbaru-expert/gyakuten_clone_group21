@@ -1,0 +1,23 @@
+.card {
+  max-width: 50rem;
+  height: 7rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid;
+  transition: 0.5s;
+  &:hover {
+    transform: translateY(-4px);
+    border: 2px solid;
+
+  }
+}
+
+.title-containar {
+  margin: 1rem;
+
+  .title {
+  color:black;
+  text-decoration:none;
+  }
+}
+
+

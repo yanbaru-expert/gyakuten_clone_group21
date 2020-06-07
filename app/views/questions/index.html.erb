@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "application", :media => "all" %>
+
+<% @questions.each do |question| %>
+<div class="question-form">
+  <div class="card"> 
+    <div class="title-containar">
+      <h5><%= link_to question.title, question_path(question), class:"title"%>
+      </h5>
+    </div>
+  </div>   
+</div>
+<% end %>

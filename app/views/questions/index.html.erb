@@ -1,4 +1,15 @@
-<%= stylesheet_link_tag "application", :media => "all" %>
+<%= stylesheet_link_tag "_questions", :media => "all" %>
+<div class="post-question">
+  <h2>新規投稿</h2>
+
+  <%= form_with model: @question, local: true do |f| %>
+  <p>【質問】</p>
+  <%= f.text_area :title, class:"question initial-height " %>
+  <p>【詳細】</p>
+  <%= f.text_area :detail, class:"detail initial-height" %>
+  <%= f.submit "送信", data: { confirm: "新規投稿しますか？"}, class:"btn btn-primary btn-block btn-lg"  %>
+  <% end %>
+</div>
 
 <% @questions.each do |question| %>
 <div class="question-form">

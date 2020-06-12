@@ -7,10 +7,10 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.create(question_params)
-    @questions = Question.all
     if @question.save
       redirect_to questions_path, notice: "質問を投稿しました"
     else
+      @questions = Question.all
       flash.now[:alert] = "入力に不備があります"
       render :index
     end

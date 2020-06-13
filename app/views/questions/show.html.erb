@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag "_questions", :media => "all" %>
+
+<div class="title-show">
+  <h5>【質問】</h5>
+  <%= markdown(@question.title) %>
+</div>
+<hr>
+<div class="detail-show">
+  <h5>【詳細】</h5>
+  <%= markdown(@question.detail) %>
+</div>

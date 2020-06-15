@@ -9,3 +9,23 @@
   <h5>【詳細】</h5>
   <%= markdown(@question.detail) %>
 </div>
+
+<% @solutions.each.with_index(1) do |solution, i| %>
+<div class="answer-show">
+  <h5>【回答<%= i %>】</h5>
+  <hr>
+  <%= markdown(solution.answer) %>
+</div>
+<% end %>
+
+<div class="answer-question">
+  <div class="answer-title">
+    <h2>回答投稿</h2>
+  </div>
+
+  <%= form_with(model:[@question,@solution], local: true) do |f| %>
+  <p>【回答】</p>
+  <%= f.text_area :answer, class:"answer initial-height " %>
+  <%= f.submit "送信", data: { confirm: "回答投稿しますか？"}, class:"btn btn-primary btn-block btn-lg"  %>
+  <% end %>
+</div>

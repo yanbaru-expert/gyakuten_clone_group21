@@ -1,17 +1,19 @@
 class SolutionsController < ApplicationController
   
   def create
-    binding.pry
-    @question = Question.create(question_params)
+    @question = Question.find(params[:question_id])
     @question.save!
     @solution = @question.solutions.create(solution_params)
-    @solution.save!
+    if @solution.save
+      redirect_to "/questions/#{@question.id}", notice: "回答を投稿しました"
+    else
+      @solutions = @question.solutions
+      flash.now[:alert] = "入力に不備があります"
+      render "questions/show"
+    end
   end
 
   private
-  def question_params
-    params.require(:question).permit(:title, :detail)
-  end
 
   def solution_params
     params.require(:solution).permit(:answer)

@@ -10,14 +10,17 @@
   <%= markdown(@question.detail) %>
 </div>
 
-  <h5>【回答】</h5>
-<% @solutions.each do |solution| %>
-  <%= solution.answer %>
+<% @solutions.each.with_index(1) do |solution, i| %>
+<div class="answer-show">
+  <h5>【回答<%= i %>】</h5>
+  <hr>
+  <%= markdown(solution.answer) %>
+</div>
 <% end %>
 
 <div class="answer-question">
   <div class="answer-title">
-  <h2>回答投稿</h2>
+    <h2>回答投稿</h2>
   </div>
 
   <%= form_with(model:[@question,@solution], local: true) do |f| %>

@@ -23,7 +23,7 @@ gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
 gem 'devise-i18n'
 
 #Markdown適用
-gem 'redcarpet', '~> 2.3.0'
+gem 'redcarpet', '~> 3.5.1'
 
 #シンタックスハイライト
 gem 'coderay'
